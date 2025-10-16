@@ -1,0 +1,266 @@
+
+header {
+  background-color: #1e1e1e; 
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px #40E0D0;
+  margin-bottom: 24px;
+}
+
+header .fs-4 {
+  color: #40E0D0; 
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+.nav-pills .nav-link {
+  color: whitesmoke;
+  margin: 0 8px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-pills .nav-link:hover {
+  color: #40E0D0;
+  background-color: transparent;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #40E0D0;
+  color: #1e1e1e;
+  font-weight: bold;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .nav {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  .nav-pills .nav-link {
+    margin: 5px 0;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  text-align: left;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('images/deliriumrates.png'); 
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-size: auto; 
+  filter: blur(10px);
+  opacity: 0.4;
+  z-index: -1;
+  pointer-events: none;
+}
+
+h1 {
+  color: whitesmoke;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  color: #40E0D0;
+}
+
+.movie-container,
+.single-movie-page .movie-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.movie-card {
+  width: 250px; 
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  box-shadow: 0 4px 8px #40E0D0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.movie-card h2 {
+  font-size: 1.5rem;
+  margin: 15px 0 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #40E0D0;
+}
+
+.movie-card p {
+  font-weight: normal;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.read-more {
+  color: #888; 
+  font-size: 0.9em;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 8px;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #ccc; 
+  text-decoration: underline;
+}
+
+.movie-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.single-movie-page .movie-card {
+  min-height: auto;
+}
+
+.single-movie-page .movie-card h2 {
+  font-size: 1.2rem;
+  margin: 12px 0 8px;  
+  text-align: center;
+}
+
+.single-movie-page .movie-card p {
+  font-weight: normal;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.single-movie-page .movie-poster {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card .ratio {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100%; 
+  position: relative;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-card .ratio iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+@media (max-width: 1400px) {
+  .movie-card { width: 230px; }
+}
+
+@media (max-width: 1200px) {
+  .movie-card { width: 200px; }
+}
+
+@media (max-width: 992px) {
+  .movie-card { width: 180px; }
+}
+
+@media (max-width: 768px) {
+  .movie-card { width: 100%; } 
+}
+
+.custom-footer {
+  position: relative;
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  padding: 20px 0;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #40E0D0;
+  box-shadow: 0 0 10px #40E0D0, 0 0 20px #40E0D0;
+}
+
+.footer-text {
+  color: whitesmoke;
+  font-size: 0.95rem;
+}
+
+.footer-icon i {
+  color: #40E0D0;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-icon:hover i {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #40E0D0) drop-shadow(0 0 12px #40E0D0);
+}
+
+.container {
+  padding-top: 0 !important;
+}
+
+
