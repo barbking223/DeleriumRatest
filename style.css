@@ -71,7 +71,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('images/deliriumrates.png'); 
+  background-image: url('deliriumrates.png'); 
   background-repeat: no-repeat;
   background-position: center center; 
   background-size: auto; 
@@ -262,5 +262,6 @@ h2 {
 .container {
   padding-top: 0 !important;
 }
+
 
 
